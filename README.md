@@ -32,3 +32,6 @@ Lors du passage d'une version de Python à une autre, l'exécution de `pip freez
 2. Lancez l'application :
    ```bash
    python main.py
+
+## 📜 Licence
+Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
