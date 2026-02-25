@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PyDeps Merger - Fusion de Requirements</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow { background-color: #1e1e2e; }
+    QListWidget { 
+        background-color: #313244; 
+        border-radius: 10px; 
+        color: #cdd6f4; 
+        font-size: 13px; 
+        padding: 5px;
+        border: 1px solid #45475a;
+    }
+    QPushButton { 
+        background-color: #89b4fa; 
+        color: #11111b; 
+        border-radius: 5px; 
+        font-weight: bold; 
+        padding: 8px;
+        min-height: 20px;
+    }
+    QPushButton:hover { background-color: #b4befe; }
+    QLineEdit { 
+        background-color: #45475a; 
+        color: #fab387; 
+        border: none; 
+        border-radius: 5px; 
+        padding: 8px;
+    }
+    #export_btn { 
+        background-color: #a6e3a1; 
+        color: #11111b; 
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    #export_btn:hover { background-color: #94e2d5; }
+    QLabel { color: #bac2de; font-weight: bold; }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    
+    <item>
+     <layout class="QHBoxLayout" name="topLayout">
+      <item>
+       <widget class="QLineEdit" name="folder1_path">
+        <property name="placeholderText"><string>Fichier A (source)...</string></property>
+        <property name="readOnly"><bool>true</bool></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="folder1_btn">
+        <property name="text"><string>Charger A</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="folder2_path">
+        <property name="placeholderText"><string>Fichier B (comparaison)...</string></property>
+        <property name="readOnly"><bool>true</bool></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="folder2_btn">
+        <property name="text"><string>Charger B</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="listsLayout">
+      <item>
+       <widget class="QListWidget" name="listView1"/>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listView2"/>
+      </item>
+     </layout>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="compare_btn">
+      <property name="text"><string>🔍 Comparer les dépendances</string></property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="export_btn">
+      <property name="text"><string>📦 Générer Requirements Global (Fusion sans doublons)</string></property>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+</ui>
